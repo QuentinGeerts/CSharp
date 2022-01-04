@@ -1,8 +1,8 @@
 # CSharp
 
-Description de la solution :
+*Description de la solution :*
 
-Fondamental  
+## Fondamental  
 ∟ Demo  
 ㅤ∟ 01 Solution  
 ㅤ∟ 02 Variables  
@@ -14,7 +14,25 @@ Fondamental
 ㅤ∟ 08 Methodes  
 ㅤ∟ 09 Enumerations  
 ∟ Exercices  
-OO  
+ㅤ∟ Page 104  
+ㅤ∟ Page 114  
+ㅤ∟ Page 138 A  
+ㅤ∟ Page 138 B  
+ㅤ∟ Page 138 C  
+ㅤ∟ Page 148 A  
+ㅤ∟ Page 148 B  
+ㅤ∟ Page 148 C  
+ㅤ∟ Page 148 D  
+ㅤ∟ Page 148 E  
+ㅤ∟ Page 164 A  
+ㅤ∟ Page 164 B  
+ㅤ∟ Page 164 C  
+ㅤ∟ Page 171 A  
+ㅤ∟ Page 171 B  
+ㅤ∟ Page 192 A  
+ㅤ∟ Page 192 B  
+ㅤ∟ Page 203  
+## OO  
 ∟ Demo  
 ㅤ∟ 01 Namespaces  
 ㅤ∟ 02 Encapsulation  
