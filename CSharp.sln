@@ -61,39 +61,39 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharquarium", "CSharquariu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LaveLingeDelegate", "LaveLingeDelegate", "{4FFA5DE8-2CB2-48B3-810C-3DDAA80CF1F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Namespaces", "01_Namespaces\01_Namespaces.csproj", "{113643B9-731B-4405-9300-3A70B713CB93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Namespaces", "01_Namespaces\01_Namespaces.csproj", "{113643B9-731B-4405-9300-3A70B713CB93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Encapsulation", "02_Encapsulation\02_Encapsulation.csproj", "{F6D4A809-29CB-4794-8BC1-4A47B5996EF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_Encapsulation", "02_Encapsulation\02_Encapsulation.csproj", "{F6D4A809-29CB-4794-8BC1-4A47B5996EF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Classes", "03_Classes\03_Classes.csproj", "{1779FE6D-92BD-4597-B8FA-02226DAA71BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Classes", "03_Classes\03_Classes.csproj", "{1779FE6D-92BD-4597-B8FA-02226DAA71BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Proprietes", "04_Proprietes\04_Proprietes.csproj", "{0B1F6ADA-F78C-4BD5-B502-65317AAF2D19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_Proprietes", "04_Proprietes\04_Proprietes.csproj", "{0B1F6ADA-F78C-4BD5-B502-65317AAF2D19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Indexeurs", "05_Indexeurs\05_Indexeurs.csproj", "{549A1A70-BCAD-4BC9-B102-5F51E47C377C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_Indexeurs", "05_Indexeurs\05_Indexeurs.csproj", "{549A1A70-BCAD-4BC9-B102-5F51E47C377C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_SurchargesOperateurs", "06_SurchargesOperateurs\06_SurchargesOperateurs.csproj", "{8324F0E9-A87B-412D-A933-D207AAE97B06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_SurchargesOperateurs", "06_SurchargesOperateurs\06_SurchargesOperateurs.csproj", "{8324F0E9-A87B-412D-A933-D207AAE97B06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_Heritage", "07_Heritage\07_Heritage.csproj", "{F7B72154-E985-405E-AAF0-F460DC3D44E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_Heritage", "07_Heritage\07_Heritage.csproj", "{F7B72154-E985-405E-AAF0-F460DC3D44E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_Polymorphisme", "08_Polymorphisme\08_Polymorphisme.csproj", "{FE5F4D59-9296-4A1E-B9B6-4DE2DF7E8310}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_Polymorphisme", "08_Polymorphisme\08_Polymorphisme.csproj", "{FE5F4D59-9296-4A1E-B9B6-4DE2DF7E8310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_HeritageDissimulation", "07_HeritageDissimulation\07_HeritageDissimulation.csproj", "{EC445537-15DF-40CB-B67B-8C5948E71508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_HeritageDissimulation", "07_HeritageDissimulation\07_HeritageDissimulation.csproj", "{EC445537-15DF-40CB-B67B-8C5948E71508}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_ClassesAbstraites", "09_ClassesAbstraites\09_ClassesAbstraites.csproj", "{5CFAD030-2AD5-4C3A-AEB2-EAD8802BDD74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09_ClassesAbstraites", "09_ClassesAbstraites\09_ClassesAbstraites.csproj", "{5CFAD030-2AD5-4C3A-AEB2-EAD8802BDD74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_ClassesStatiques", "10_ClassesStatiques\10_ClassesStatiques.csproj", "{34CF22C4-CC04-4865-933C-678F2B9DF38E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_ClassesStatiques", "10_ClassesStatiques\10_ClassesStatiques.csproj", "{34CF22C4-CC04-4865-933C-678F2B9DF38E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_Interfaces", "11_Interfaces\11_Interfaces.csproj", "{F2D86137-0EA2-419A-913A-453F0BF4FC6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_Interfaces", "11_Interfaces\11_Interfaces.csproj", "{F2D86137-0EA2-419A-913A-453F0BF4FC6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_ConstructeursDestructeurs", "12_ConstructeursDestructeurs\12_ConstructeursDestructeurs.csproj", "{8F772DC8-0895-4DA5-B810-0BAD9A0768A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_ConstructeursDestructeurs", "12_ConstructeursDestructeurs\12_ConstructeursDestructeurs.csproj", "{8F772DC8-0895-4DA5-B810-0BAD9A0768A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_Exceptions", "13_Exceptions\13_Exceptions.csproj", "{0C77D6FF-E50B-44EB-A19F-24FC104A824E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_Exceptions", "13_Exceptions\13_Exceptions.csproj", "{0C77D6FF-E50B-44EB-A19F-24FC104A824E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_Delegues", "14_Delegues\14_Delegues.csproj", "{B1E6186E-361F-4B66-A5CB-2C34A6C0DF1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_Delegues", "14_Delegues\14_Delegues.csproj", "{B1E6186E-361F-4B66-A5CB-2C34A6C0DF1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carwash1", "Carwash1\Carwash1.csproj", "{E01FC770-7C2C-4D3D-B819-CE1B1A949917}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carwash1", "Carwash1\Carwash1.csproj", "{E01FC770-7C2C-4D3D-B819-CE1B1A949917}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carwash2", "Carwash2\Carwash2.csproj", "{01107892-41C2-4722-A1EB-9223A4139EF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carwash2", "Carwash2\Carwash2.csproj", "{01107892-41C2-4722-A1EB-9223A4139EF0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionBanque04_Proprietes", "GestionBanque04_Proprietes\GestionBanque04_Proprietes.csproj", "{44A0C502-0EB2-41E9-9DAA-257A190B02C2}"
 EndProject
@@ -133,9 +133,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08 Methodes", "08 Methodes"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09 Enumerations", "09 Enumerations", "{823A8940-25FF-4085-AD14-85298592D869}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpVSCodeExtensionDelegue", "CSharpVSCodeExtensionDelegue\CSharpVSCodeExtensionDelegue.csproj", "{F4F21774-41F2-4005-8F8F-31E361C2FDDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpVSCodeExtensionDelegue", "CSharpVSCodeExtensionDelegue\CSharpVSCodeExtensionDelegue.csproj", "{F4F21774-41F2-4005-8F8F-31E361C2FDDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_CompactDiskDelegate", "14_CompactDiskDelegate\14_CompactDiskDelegate.csproj", "{378A12CF-9AE9-480D-A090-A5E114F67B47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_CompactDiskDelegate", "14_CompactDiskDelegate\14_CompactDiskDelegate.csproj", "{378A12CF-9AE9-480D-A090-A5E114F67B47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroesVSMonsters", "HeroesVSMonsters\HeroesVSMonsters.csproj", "{B14FE402-3BE8-4BDD-88A4-15CBEA720C33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -259,6 +261,10 @@ Global
 		{378A12CF-9AE9-480D-A090-A5E114F67B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{378A12CF-9AE9-480D-A090-A5E114F67B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{378A12CF-9AE9-480D-A090-A5E114F67B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B14FE402-3BE8-4BDD-88A4-15CBEA720C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B14FE402-3BE8-4BDD-88A4-15CBEA720C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B14FE402-3BE8-4BDD-88A4-15CBEA720C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B14FE402-3BE8-4BDD-88A4-15CBEA720C33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -329,6 +335,7 @@ Global
 		{823A8940-25FF-4085-AD14-85298592D869} = {62E39B7C-4049-45BE-A945-9DE644E51F7D}
 		{F4F21774-41F2-4005-8F8F-31E361C2FDDD} = {5EE3B3CE-324A-44B2-AE09-406A3A752F5E}
 		{378A12CF-9AE9-480D-A090-A5E114F67B47} = {5EE3B3CE-324A-44B2-AE09-406A3A752F5E}
+		{B14FE402-3BE8-4BDD-88A4-15CBEA720C33} = {0BABFDC2-82A9-405E-9C3A-DDA7A09C8E1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C0BD4AB-6A7C-4974-B33B-ED7B97739C4D}
