@@ -30,7 +30,7 @@ namespace Toto
     {
         public void Hello()
         {
-            Console.WriteLine("Hello World");
+            Console.WriteLine("Hello de Toto - MaClasse");
         }
     }
 
@@ -48,7 +48,7 @@ namespace Toto2
 {
     class MaClasse
     {
-        public void Bonjour()
+        public void Hello()
         {
             Console.WriteLine("Bonjour tout le monde !");
         }
@@ -59,6 +59,9 @@ namespace Toto2
 {
     class MaClasse2
     {
-
+        public void Hello()
+        {
+            Console.WriteLine("Hello de Toto2 - MaClasse2");
+        }
     }
 }
