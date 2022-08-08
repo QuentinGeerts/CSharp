@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace _14_CompactDiskDelegate
+﻿namespace _14_CompactDiskDelegate
 {
     class Program
     {
