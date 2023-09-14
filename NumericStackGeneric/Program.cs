@@ -1,5 +1,4 @@
 ﻿// Créer une pile numérique pour les entiers
-
 using NumericStackGeneric.Models;
 
 NumericStack<int> intStack = new NumericStack<int>();
