@@ -2,15 +2,15 @@ namespace PersonManagerGeneric.Models;
 
 public class Student : Person
 {
-    public Student(string name, int age, string studentID) : base(name, age)
+    public Student(string name, int age, string studentId) : base(name, age)
     {
-        StudentID = studentID;
+        StudentId = studentId;
     }
 
-    public string StudentID { get; set; }
+    public string StudentId { get; set; }
 
     public override string ToString()
     {
-        return base.ToString() + $", Identifiant Étudiant : {StudentID}";
+        return base.ToString() + $", Identifiant Étudiant : {StudentId}";
     }
 }

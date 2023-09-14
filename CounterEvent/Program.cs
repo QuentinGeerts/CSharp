@@ -1,7 +1,7 @@
 ﻿using CounterEvent.Models;
 
-var compteur = new Counter();
-var afficheur = new Displayer();
+Counter compteur = new Counter();
+Displayer afficheur = new Displayer();
 
 // Abonnement de la méthode AfficherNouvelleValeur à l'événement ValeurChangee
 compteur.ChangedValue += afficheur.DisplayNewValue;
