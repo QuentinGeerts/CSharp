@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterEvent", "CounterEven
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationDelegate", "NotificationDelegate\NotificationDelegate.csproj", "{BCF5AB8C-6BAC-457D-9712-15877714FD98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericStackGeneric", "NumericStackGeneric\NumericStackGeneric.csproj", "{187FE5C7-ADD3-4629-88B1-D8B3538A59BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -297,6 +299,10 @@ Global
 		{BCF5AB8C-6BAC-457D-9712-15877714FD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF5AB8C-6BAC-457D-9712-15877714FD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCF5AB8C-6BAC-457D-9712-15877714FD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187FE5C7-ADD3-4629-88B1-D8B3538A59BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187FE5C7-ADD3-4629-88B1-D8B3538A59BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187FE5C7-ADD3-4629-88B1-D8B3538A59BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187FE5C7-ADD3-4629-88B1-D8B3538A59BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -374,6 +380,7 @@ Global
 		{BBC68F6B-A6F6-4F32-9FBE-F549B0625D7A} = {0BABFDC2-82A9-405E-9C3A-DDA7A09C8E1A}
 		{4C74C638-15BC-4ABA-81E8-F889CA8C50E5} = {EA08CC3D-2700-4443-8FEA-9E792DC49DBA}
 		{BCF5AB8C-6BAC-457D-9712-15877714FD98} = {5EE3B3CE-324A-44B2-AE09-406A3A752F5E}
+		{187FE5C7-ADD3-4629-88B1-D8B3538A59BA} = {459D5DDB-D8E1-4C3F-980F-733A0F49F353}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C0BD4AB-6A7C-4974-B33B-ED7B97739C4D}
