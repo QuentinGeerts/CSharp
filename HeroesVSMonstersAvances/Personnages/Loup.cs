@@ -1,22 +1,14 @@
-﻿using System;
-
-using HeroesVSMonsters.Interfaces;
+﻿using HeroesVSMonsters.Interfaces;
 
 namespace HeroesVSMonsters.Personnages
 {
-    class Loup : Monstre, ICuir
+    internal class Loup : Monstre, ICuir
     {
-        private int _Cuir;
-
-        public int Cuir
-        {
-            get { return _Cuir; }
-            set { _Cuir = value; }
-        }
-
         public Loup()
         {
             Cuir = De4.Lance();
         }
+
+        public int Cuir { get; set; }
     }
 }

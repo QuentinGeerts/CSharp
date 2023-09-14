@@ -2,12 +2,8 @@
 
 namespace GestionBanque.Model
 {
-    class Personne
+    internal class Personne
     {
-
-        public string Nom { get; private set; }
-        public string Prenom { get; private set; }
-        public DateTime DateNaiss { get; private set; }
         public Personne(string nom, string prenom, DateTime dateNaiss)
         {
             Nom = nom;
@@ -15,6 +11,10 @@ namespace GestionBanque.Model
             DateNaiss = dateNaiss;
             Console.WriteLine($"Personne créée : {Nom} {Prenom} {DateNaiss}");
         }
+
+        public string Nom { get; }
+        public string Prenom { get; }
+        public DateTime DateNaiss { get; }
 
         public override string ToString()
         {

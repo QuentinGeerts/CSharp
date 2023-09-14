@@ -1,4 +1,4 @@
 ﻿namespace Carwash1
 {
-    delegate void CarwashDelegate ( Voiture v );
+    internal delegate void CarwashDelegate(Voiture v);
 }

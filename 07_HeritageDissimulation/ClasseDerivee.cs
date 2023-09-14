@@ -2,7 +2,7 @@
 
 namespace _07_HeritageDissimulation
 {
-    class ClasseDerivee : ClasseDeBase
+    internal class ClasseDerivee : ClasseDeBase
     {
         public override void MethodeRedefinie()
         {

@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace _11_Interfaces
+﻿namespace _11_Interfaces
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //Point p1 = new Point() { X = 5, Y = 5 };
             //p1.Display();
@@ -14,15 +12,15 @@ namespace _11_Interfaces
             //p2.Display();
             ////p2.Draw();
 
-            Voiture voiture = new Voiture();
+            var voiture = new Voiture();
             voiture.Rouler();
             voiture.Tourner();
 
-            Bateau bateau = new Bateau();
+            var bateau = new Bateau();
             bateau.Naviguer();
             bateau.Tourner();
 
-            VehiculeAmphibie vehiculeAmphibie = new VehiculeAmphibie();
+            var vehiculeAmphibie = new VehiculeAmphibie();
             vehiculeAmphibie.Naviguer();
             vehiculeAmphibie.Tourner();
             vehiculeAmphibie.Rouler();

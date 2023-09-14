@@ -1,12 +1,6 @@
-﻿using System;
-
-namespace HeroesVSMonsters.Personnages
+﻿namespace HeroesVSMonsters.Personnages
 {
-    class Monstre : Personnage
+    internal class Monstre : Personnage
     {
-        public Monstre()
-        {
-
-        }
     }
 }

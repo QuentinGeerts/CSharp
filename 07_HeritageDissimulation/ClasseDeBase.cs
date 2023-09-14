@@ -2,7 +2,7 @@
 
 namespace _07_HeritageDissimulation
 {
-    class ClasseDeBase
+    internal class ClasseDeBase
     {
         public virtual void MethodeRedefinie()
         {

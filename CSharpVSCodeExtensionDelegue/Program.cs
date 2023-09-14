@@ -1,17 +1,15 @@
-﻿using System;
-
-namespace CSharpVSCodeExtensionDelegue
+﻿namespace CSharpVSCodeExtensionDelegue
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            CSharpVSCodeExtension cSharpExtension = new CSharpVSCodeExtension();
-            VisualStudioCodeExtension indentExtension = new VisualStudioCodeExtension() { Name = "Indent Organizer" };
-            VisualStudioCodeExtension linterExtension = new VisualStudioCodeExtension() { Name = "Easy Linter" };
-            VisualStudioCodeExtension colorExtension = new VisualStudioCodeExtension() { Name = "Color Theme Manager" };
+            var cSharpExtension = new CSharpVSCodeExtension();
+            var indentExtension = new VisualStudioCodeExtension { Name = "Indent Organizer" };
+            var linterExtension = new VisualStudioCodeExtension { Name = "Easy Linter" };
+            var colorExtension = new VisualStudioCodeExtension { Name = "Color Theme Manager" };
 
-            VisualStudioCode vsc = new VisualStudioCode(cSharpExtension, indentExtension, linterExtension, colorExtension);
+            var vsc = new VisualStudioCode(cSharpExtension, indentExtension, linterExtension, colorExtension);
 
             vsc.Start();
         }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace GestionBanque.Model
 {
-    class Banque
+    internal class Banque
     {
         // Attributs
-        Dictionary<string, Courant> _Comptes = new Dictionary<string, Courant>();
+        private readonly Dictionary<string, Courant> _Comptes = new();
 
         // Propriétés
         public string Nom { get; set; }
@@ -16,7 +16,7 @@ namespace GestionBanque.Model
         {
             get
             {
-                _Comptes.TryGetValue(Numero, out Courant courant);
+                _Comptes.TryGetValue(Numero, out var courant);
                 return courant;
             }
         }
@@ -25,19 +25,14 @@ namespace GestionBanque.Model
         public void Ajouter(Courant Compte)
         {
             if (_Comptes.TryAdd(Compte.Numero, Compte))
-            {
                 Console.WriteLine($"Le compte n°{Compte.Numero} a été ajouté.");
-            }
             else
-            {
                 Console.WriteLine("Le compte existe déjà.");
-            }
         }
 
         public void Supprimer(string Numero)
         {
             _Comptes.Remove(Numero);
         }
-
     }
 }

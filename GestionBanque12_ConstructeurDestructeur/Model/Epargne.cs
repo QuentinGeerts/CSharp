@@ -2,18 +2,9 @@
 
 namespace GestionBanque.Model
 {
-
-    class Epargne : Compte
+    internal class Epargne : Compte
     {
         // Attributs
-        private DateTime _DateDernierRetrait;
-
-        // Propriétés
-        public DateTime DateDernierRetrait
-        {
-            get { return _DateDernierRetrait; }
-            private set { _DateDernierRetrait = value; }
-        }
 
         // Constructeurs
         public Epargne(string numero, Personne titulaire) : base(numero, titulaire)
@@ -24,10 +15,13 @@ namespace GestionBanque.Model
         {
         }
 
+        // Propriétés
+        public DateTime DateDernierRetrait { get; private set; }
+
         // Méthodes
         public override void Retrait(double Montant)
         {
-            double AncienSolde = Solde;
+            var AncienSolde = Solde;
             base.Retrait(Montant);
 
             if (Solde != AncienSolde) DateDernierRetrait = DateTime.Now;

@@ -1,6 +1,12 @@
 ﻿namespace ExoPage203
 {
-    public enum Couleur { Coeur, Carreau, Pique, Trefle }
+    public enum Couleur
+    {
+        Coeur,
+        Carreau,
+        Pique,
+        Trefle
+    }
 
     public enum Valeur
     {

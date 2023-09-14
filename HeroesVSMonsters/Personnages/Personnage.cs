@@ -1,63 +1,44 @@
 ﻿using System;
-
 using HeroesVSMonsters.Tools;
 
 namespace HeroesVSMonsters.Personnages
 {
-    class Personnage
+    internal class Personnage
     {
-        public event Action<Personnage> Meurt;
-
         // Attributes
-        private int _Endurance, _Force, _PV;
-        private readonly De _De4, _De6;
-
-        // Properties
-        public virtual int Endurance
-        {
-            get { return _Endurance; }
-            private set { _Endurance = value; }
-        }
-
-        public virtual int Force
-        {
-            get { return _Force; }
-            private set { _Force = value; }
-        }
-
-        public virtual int PV
-        {
-            get { return _PV; }
-            private set 
-            { 
-                _PV = value; 
-                if (_PV <= 0 && Meurt != null)
-                {
-                    Meurt(this);
-                }
-            }
-        }
-
-        protected De De4
-        {
-            get { return _De4; }
-        }
-
-        protected De De6
-        {
-            get { return _De6; }
-        }
+        private int _PV;
 
         // Constructor
         public Personnage()
         {
-            _De4 = new De(4);
-            _De6 = new De(6);
+            De4 = new De(4);
+            De6 = new De(6);
 
             Force = De.GetNouvelleCaracteristique();
             Endurance = De.GetNouvelleCaracteristique();
             ResetPV();
         }
+
+        // Properties
+        public virtual int Endurance { get; }
+
+        public virtual int Force { get; }
+
+        public virtual int PV
+        {
+            get => _PV;
+            private set
+            {
+                _PV = value;
+                if (_PV <= 0 && Meurt != null) Meurt(this);
+            }
+        }
+
+        protected De De4 { get; }
+
+        protected De De6 { get; }
+
+        public event Action<Personnage> Meurt;
 
         // Methods
         public void ResetPV()
@@ -72,17 +53,18 @@ namespace HeroesVSMonsters.Personnages
             //else if ( endurance < 15 ) return 1;
             //else return 2;
 
-            return ( caracteristique < 5 ) ? -1 : 
-                ( caracteristique < 10 ) ? 0 : 
-                ( caracteristique < 15 ) ? 1 : 2;
+            return caracteristique < 5 ? -1 :
+                caracteristique < 10 ? 0 :
+                caracteristique < 15 ? 1 : 2;
         }
 
         public void Frappe(Personnage personnage)
         {
             // Calcul des dégâts
-            int degats = De4.Lance() + GetModificateur(Force);
+            var degats = De4.Lance() + GetModificateur(Force);
 
-            Console.WriteLine($"{this.GetType().Name} frappe {personnage.GetType().Name} et lui inflige {degats} point(s) de dégats.");
+            Console.WriteLine(
+                $"{GetType().Name} frappe {personnage.GetType().Name} et lui inflige {degats} point(s) de dégats.");
 
             personnage.PV -= degats;
         }

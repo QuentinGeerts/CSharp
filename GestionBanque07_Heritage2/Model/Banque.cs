@@ -4,28 +4,22 @@ using System.Linq;
 
 namespace GestionBanque.Model
 {
-    class Banque
+    internal class Banque
     {
         // Attributs
-        Dictionary<string, Courant> _Comptes = new Dictionary<string, Courant>();
+        private readonly Dictionary<string, Courant> _Comptes = new();
 
         // Propriétés
         public string Nom { get; set; }
 
-        public KeyValuePair<string, Courant>[] Comptes
-        {
-            get
-            {
-                return _Comptes.ToArray();
-            }
-        }
+        public KeyValuePair<string, Courant>[] Comptes => _Comptes.ToArray();
 
         // Indexeurs
         public Courant this[string Numero]
         {
             get
             {
-                _Comptes.TryGetValue(Numero, out Courant courant);
+                _Comptes.TryGetValue(Numero, out var courant);
                 return courant;
             }
         }
@@ -34,13 +28,9 @@ namespace GestionBanque.Model
         public void Ajouter(Courant Compte)
         {
             if (_Comptes.TryAdd(Compte.Numero, Compte))
-            {
                 Console.WriteLine($"Le compte n°{Compte.Numero} a été ajouté.");
-            }
             else
-            {
                 Console.WriteLine("Le compte existe déjà.");
-            }
         }
 
         public void Supprimer(string Numero)
@@ -48,21 +38,19 @@ namespace GestionBanque.Model
             _Comptes.Remove(Numero);
         }
 
-        public double AvoirDesComptes (Personne p)
+        public double AvoirDesComptes(Personne p)
         {
-            double TotalDesAvoirs = 0.0;
+            var TotalDesAvoirs = 0.0;
 
-            foreach (Courant c in _Comptes.Values)
-            {
+            foreach (var c in _Comptes.Values)
                 if (c.Titulaire == p)
                 {
-                    Console.WriteLine($"[AvoirDesComptes] {c.Titulaire.Nom} {c.Titulaire.Prenom} n°{c.Numero} : {c.Solde}e");
+                    Console.WriteLine(
+                        $"[AvoirDesComptes] {c.Titulaire.Nom} {c.Titulaire.Prenom} n°{c.Numero} : {c.Solde}e");
                     TotalDesAvoirs += c; // TotalDesAvoirs = TotalDesAvoirs + c // double + Courant
                 }
-            }
 
             return TotalDesAvoirs;
         }
-
     }
 }

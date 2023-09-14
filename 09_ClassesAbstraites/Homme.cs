@@ -2,7 +2,7 @@
 
 namespace _09_ClassesAbstraites
 {
-    class Homme : Personne
+    internal class Homme : Personne
     {
         public override void Ecouter()
         {

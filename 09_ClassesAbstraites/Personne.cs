@@ -2,14 +2,14 @@
 
 namespace _09_ClassesAbstraites
 {
-    abstract class Personne
+    internal abstract class Personne
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }
 
         public virtual void Parler()
         {
-            Console.WriteLine($"{this.GetType().Name} parle");
+            Console.WriteLine($"{GetType().Name} parle");
         }
 
         // Prototype : public abstract void Ecouter();

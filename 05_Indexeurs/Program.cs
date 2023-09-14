@@ -2,24 +2,18 @@
 
 namespace _05_Indexeurs
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Deck deck = new Deck();
+            var deck = new Deck();
             deck.InitDeck();
 
-            Card[] main = new Card[7];
+            var main = new Card[7];
 
-            for ( int i = 0; i < main.Length; i++ )
-            {
-                main[i] = deck[0];
-            }
+            for (var i = 0; i < main.Length; i++) main[i] = deck[0];
 
-            foreach ( Card card in main )
-            {
-                Console.WriteLine($"Le {card.Valeur} de {card.Couleur}");
-            }
+            foreach (var card in main) Console.WriteLine($"Le {card.Valeur} de {card.Couleur}");
 
             //Console.WriteLine(deck[-1]);
 

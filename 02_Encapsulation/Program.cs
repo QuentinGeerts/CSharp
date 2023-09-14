@@ -13,11 +13,11 @@ namespace _02_Encapsulation
     // - protected internal
     // - private
     // - private protected
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Personne quentin = new Personne();
+            var quentin = new Personne();
             quentin.nom = "Geerts";
             quentin.prenom = "Quentin";
             quentin.dateNaiss = new DateTime(1996, 04, 03);
@@ -26,7 +26,7 @@ namespace _02_Encapsulation
 
             Console.WriteLine($"{quentin.nom} {quentin.prenom} {quentin.dateNaiss}");
 
-            Personne raphael = new Personne();
+            var raphael = new Personne();
             raphael.prenom = "Raphael";
             raphael.nom = "Kuban";
 

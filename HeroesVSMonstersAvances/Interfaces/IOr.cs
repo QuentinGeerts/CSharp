@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HeroesVSMonsters.Interfaces
+﻿namespace HeroesVSMonsters.Interfaces
 {
-    interface IOr
+    internal interface IOr
     {
         int Or { get; }
     }

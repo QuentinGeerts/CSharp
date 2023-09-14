@@ -23,34 +23,37 @@ namespace Carwash2
      * CTRL + SHIFT + L => Supprimer la ligne
      */
 
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Exercice Carwash - Utilisation des délégués");
 
             #region Création du Carwash et des voitures
-            Title("Création du Carwash et des voitures");
-            Carwash carwash = new Carwash();
 
-            Voiture v1 = new Voiture("1-ABC-123");
-            Voiture v2 = new Voiture("1-ABC-124");
-            Voiture v3 = new Voiture("1-ABC-125");
-            Voiture v4 = new Voiture("1-ABC-126");
+            Title("Création du Carwash et des voitures");
+            var carwash = new Carwash();
+
+            var v1 = new Voiture("1-ABC-123");
+            var v2 = new Voiture("1-ABC-124");
+            var v3 = new Voiture("1-ABC-125");
+            var v4 = new Voiture("1-ABC-126");
+
             #endregion
 
             #region Traitement des voitures
+
             Title("Traitement des voitures");
 
             carwash.Traiter(v1);
             carwash.Traiter(v2);
             carwash.Traiter(v3);
             carwash.Traiter(v4);
-            #endregion
 
+            #endregion
         }
 
-        static void Title(string str)
+        private static void Title(string str)
         {
             Console.WriteLine();
             Console.WriteLine($"~~~ {str} ~~~");

@@ -1,6 +1,6 @@
 ﻿namespace GestionBanque.Model
 {
-    interface IBanker : ICustomer
+    internal interface IBanker : ICustomer
     {
         Personne Titulaire { get; }
         string Numero { get; }

@@ -2,7 +2,7 @@
 
 namespace _11_Interfaces
 {
-    class Point : IPoint
+    internal class Point : IPoint
     {
         public int X { get; set; }
         public int Y { get; set; }

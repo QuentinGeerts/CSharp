@@ -3,14 +3,14 @@
 namespace _07_Heritage
 {
     // Classe parent qui hérite de ses membres aux classes dérivées
-    class Forme
+    internal class Forme
     {
         protected string _Couleur;
 
         public string Couleur
         {
-            get { return _Couleur; }
-            set { _Couleur = value; }
+            get => _Couleur;
+            set => _Couleur = value;
         }
 
         // Virtual : Permet la redéfinition de la méthode dans les types dérivés

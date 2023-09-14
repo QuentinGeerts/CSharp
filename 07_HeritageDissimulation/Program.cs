@@ -2,17 +2,17 @@
 
 namespace _07_HeritageDissimulation
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("-- Classe de base --");
-            ClasseDeBase cdb = new ClasseDeBase();
+            var cdb = new ClasseDeBase();
             cdb.MethodeRedefinie();
             cdb.MethodeDissimulee();
 
             Console.WriteLine("-- Classe dérivée--");
-            ClasseDerivee cd = new ClasseDerivee();
+            var cd = new ClasseDerivee();
             cd.MethodeRedefinie();
             cd.MethodeDissimulee();
 

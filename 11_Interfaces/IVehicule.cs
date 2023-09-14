@@ -1,6 +1,6 @@
 ﻿namespace _11_Interfaces
 {
-    interface IVehicule
+    internal interface IVehicule
     {
         void Tourner();
     }

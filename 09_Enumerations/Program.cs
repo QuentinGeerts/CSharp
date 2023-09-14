@@ -2,27 +2,46 @@
 
 namespace _09_Enumerations
 {
-    public enum Race { Humain, Nain, Orc }
+    public enum Race
+    {
+        Humain,
+        Nain,
+        Orc
+    }
 
-    public enum Class { Guerrier = 1, Sorcier, Archer }
+    public enum Class
+    {
+        Guerrier = 1,
+        Sorcier,
+        Archer
+    }
 
-    public enum Right { Execute, Write, Read }
+    public enum Right
+    {
+        Execute,
+        Write,
+        Read
+    }
 
     // Utilisation de flags (fonctionne avec des puissances de 2
     [Flags]
-    public enum RightFlag { Execute = 1, Write = 2, Read = 4 }
+    public enum RightFlag
+    {
+        Execute = 1,
+        Write = 2,
+        Read = 4
+    }
 
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
             Console.WriteLine("→ Affichage du type de l'enum");
             Console.WriteLine(typeof(Race));
 
-            Race race1 = Race.Humain;
-            Race race2 = Race.Nain;
-            Race race3 = Race.Orc;
+            var race1 = Race.Humain;
+            var race2 = Race.Nain;
+            var race3 = Race.Orc;
 
             Console.WriteLine("\n→ Affichage des valeurs de l'enum");
 
@@ -44,9 +63,9 @@ namespace _09_Enumerations
 
             // ▬▬▬▬ //
 
-            Class class1 = Class.Guerrier;
-            Class class2 = Class.Sorcier;
-            Class class3 = Class.Archer;
+            var class1 = Class.Guerrier;
+            var class2 = Class.Sorcier;
+            var class3 = Class.Archer;
 
             Console.WriteLine("\n→ Affichage des classes ");
 
@@ -56,9 +75,9 @@ namespace _09_Enumerations
 
             // ▬▬▬▬ //
 
-            Right right1 = Right.Write;
-            Right right2 = Right.Read | Right.Write;
-            Right right3 = Right.Read | Right.Write | Right.Execute;
+            var right1 = Right.Write;
+            var right2 = Right.Read | Right.Write;
+            var right3 = Right.Read | Right.Write | Right.Execute;
 
             Console.WriteLine("\n→ Affichage des droits");
 
@@ -70,9 +89,9 @@ namespace _09_Enumerations
 
             // ▬▬▬▬ //
 
-            RightFlag rf1 = RightFlag.Execute;
-            RightFlag rf2 = RightFlag.Write | RightFlag.Read;
-            RightFlag rf3 = RightFlag.Execute | RightFlag.Write | RightFlag.Read;
+            var rf1 = RightFlag.Execute;
+            var rf2 = RightFlag.Write | RightFlag.Read;
+            var rf3 = RightFlag.Execute | RightFlag.Write | RightFlag.Read;
 
             Console.WriteLine("\n→ Affichage des droits (flags)");
 
@@ -84,49 +103,36 @@ namespace _09_Enumerations
 
             Console.WriteLine("\n→ Vérification du droit :");
 
-            if (rf3.HasFlag(RightFlag.Execute))
-            {
-                Console.WriteLine("→ Accès au droit d'exécution");
-            }
+            if (rf3.HasFlag(RightFlag.Execute)) Console.WriteLine("→ Accès au droit d'exécution");
 
-            if (rf3.HasFlag(RightFlag.Write))
-            {
-                Console.WriteLine("→ Accès au droit d'écriture");
-            }
+            if (rf3.HasFlag(RightFlag.Write)) Console.WriteLine("→ Accès au droit d'écriture");
 
-            if (rf3.HasFlag(RightFlag.Read))
-            {
-                Console.WriteLine("→ Accès au droit de lecture");
-            }
+            if (rf3.HasFlag(RightFlag.Read)) Console.WriteLine("→ Accès au droit de lecture");
 
             // ▬▬▬▬ //
 
             Console.WriteLine("\n→ Parcour d'un type :");
 
-            foreach (string droit in Enum.GetNames(typeof(Right)))
-            {
-                Console.WriteLine(droit);
-            }
+            foreach (var droit in Enum.GetNames(typeof(Right))) Console.WriteLine(droit);
 
             // ▬▬▬▬ //
 
             Console.WriteLine("\n→ Conversion d'une chaine de caractères en type Enum :");
 
-            string write = "Write";
+            var write = "Write";
 
             // RightFlag rf4 = write;
-            RightFlag rf4 = (RightFlag)Enum.Parse(typeof(RightFlag), write);
+            var rf4 = (RightFlag)Enum.Parse(typeof(RightFlag), write);
 
             Console.WriteLine("rf4 : " + rf4);
 
-            if (Enum.TryParse<Right>(write, out Right rf5))
+            if (Enum.TryParse(write, out Right rf5))
             {
                 Console.WriteLine("\n→ Conversion réussie");
                 Console.WriteLine((int)rf5 + " " + rf5);
             }
 
             Console.WriteLine("\n→ Récupération externe du droit : " + rf5);
-
         }
     }
 }

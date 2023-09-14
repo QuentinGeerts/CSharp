@@ -147,6 +147,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExoPage203", "ExoPage203\Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeroesVSMonstersAvances", "HeroesVSMonstersAvances\HeroesVSMonstersAvances.csproj", "{BBC68F6B-A6F6-4F32-9FBE-F549B0625D7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterEvent", "CounterEvent\CounterEvent.csproj", "{4C74C638-15BC-4ABA-81E8-F889CA8C50E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -285,6 +287,10 @@ Global
 		{BBC68F6B-A6F6-4F32-9FBE-F549B0625D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBC68F6B-A6F6-4F32-9FBE-F549B0625D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBC68F6B-A6F6-4F32-9FBE-F549B0625D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C74C638-15BC-4ABA-81E8-F889CA8C50E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C74C638-15BC-4ABA-81E8-F889CA8C50E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C74C638-15BC-4ABA-81E8-F889CA8C50E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C74C638-15BC-4ABA-81E8-F889CA8C50E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -360,6 +366,7 @@ Global
 		{B2D1BF55-2FBC-4028-A912-D6BAE09C3E2A} = {1114E892-1F96-4B66-9C53-5933C9377DFB}
 		{B5A7885F-C415-4A37-AA65-298834CD4F4E} = {B2D1BF55-2FBC-4028-A912-D6BAE09C3E2A}
 		{BBC68F6B-A6F6-4F32-9FBE-F549B0625D7A} = {0BABFDC2-82A9-405E-9C3A-DDA7A09C8E1A}
+		{4C74C638-15BC-4ABA-81E8-F889CA8C50E5} = {EA08CC3D-2700-4443-8FEA-9E792DC49DBA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C0BD4AB-6A7C-4974-B33B-ED7B97739C4D}

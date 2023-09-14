@@ -7,30 +7,14 @@ namespace GestionBanque.Model
     // de surcharge de méthodes et d’encapsulation.
     // Attention le niveau d’accessibilité du mutateur de la propriété Solde doit rester « private ».
 
-    class Compte
+    internal class Compte
     {
-        private string _Numero;
-        private double _Solde;
-        private Personne _Titulaire;
-
         // Propriétés
-        public string Numero
-        {
-            get { return _Numero; }
-            set { _Numero = value; }
-        }
+        public string Numero { get; set; }
 
-        public double Solde
-        {
-            get { return _Solde; }
-            private set { _Solde = value; }
-        }
+        public double Solde { get; private set; }
 
-        public Personne Titulaire
-        {
-            get { return _Titulaire; }
-            set { _Titulaire = value; }
-        }
+        public Personne Titulaire { get; set; }
 
         // Méthodes
         public virtual void Retrait(double Montant)

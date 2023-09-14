@@ -2,11 +2,11 @@
 
 namespace _13_Exceptions
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            MaClasse maClasse = new MaClasse();
+            var maClasse = new MaClasse();
             int[] ints = { 1, 2, 3, 4, 5, 6 };
 
             try
@@ -16,23 +16,23 @@ namespace _13_Exceptions
                 // gère l'exception
 
                 //Console.WriteLine(maClasse.Division(5, 0));
-                int index = 5;
-                if ( index < 0 || index > ints.Length - 1 ) throw new OutOfMyArrayException(index, ints);
+                var index = 5;
+                if (index < 0 || index > ints.Length - 1) throw new OutOfMyArrayException(index, ints);
                 Console.WriteLine(ints[index]);
             }
-            catch ( DivideByZeroException e )
+            catch (DivideByZeroException e)
             {
                 Console.WriteLine(e.Message);
             }
-            catch ( OutOfMyArrayException e )
+            catch (OutOfMyArrayException e)
             {
                 Console.WriteLine(e.Message);
             }
-            catch ( IndexOutOfRangeException e )
+            catch (IndexOutOfRangeException e)
             {
                 Console.WriteLine("En dehors de la portée du tableau.");
             }
-            catch ( Exception e )
+            catch (Exception e)
             {
                 Console.WriteLine("Une exception");
             }

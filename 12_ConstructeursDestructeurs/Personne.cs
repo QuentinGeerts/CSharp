@@ -2,18 +2,8 @@
 
 namespace _12_ConstructeursDestructeurs
 {
-    class Personne
+    internal class Personne
     {
-        // Pour créer un objet, on a besoin d'un constructeur
-        // Constructeur = nomdelaclasse() {}
-
-        public string Nom { get; set; }
-        public string Prenom { get; set; }
-        public DateTime DateNaiss { get; set; }
-        public double Taille { get; set; }
-        public double Poids { get; set; }
-
-
         // Constructeur par défaut = constructeur vide
         public Personne()
         {
@@ -38,6 +28,14 @@ namespace _12_ConstructeursDestructeurs
             Taille = taille;
             Poids = poids;
         }
+        // Pour créer un objet, on a besoin d'un constructeur
+        // Constructeur = nomdelaclasse() {}
+
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public DateTime DateNaiss { get; set; }
+        public double Taille { get; set; }
+        public double Poids { get; set; }
 
         // Destructeur
         ~Personne()

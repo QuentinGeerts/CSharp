@@ -1,32 +1,35 @@
-﻿using GestionBanque.Model;
-using System;
+﻿using System;
+using GestionBanque.Model;
 
 namespace GestionBanque05_Indexeurs
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Title("-- Gestion de banque - C# OO --");
 
             #region Création des personnes
+
             Title("Création des personnes");
-            Personne Adrian = new Personne();
+            var Adrian = new Personne();
             Adrian.Nom = "Prevot";
             Adrian.Prenom = "Adrian";
             Adrian.DateNaiss = DateTime.Now;
 
-            Personne Mathieu = new Personne()
+            var Mathieu = new Personne
             {
                 Nom = "Meurée",
                 Prenom = "Mathieu",
                 DateNaiss = DateTime.Now
             };
+
             #endregion
 
             #region Création des comptes courants
+
             Title("Création des comptes courants");
-            Courant AC = new Courant();
+            var AC = new Courant();
             AC.Titulaire = Adrian;
             AC.Numero = "001";
             //AdrianCourant.Solde = 1500; // Ne fonctionne pas => private set
@@ -36,18 +39,20 @@ namespace GestionBanque05_Indexeurs
             AC.Retrait(610);
             AC.Retrait(100);
 
-            Courant MC = new Courant();
+            var MC = new Courant();
             MC.Titulaire = Mathieu;
             MC.Numero = "002";
             MC.LigneDeCredit = 500;
 
             MC.Depot(1000);
             MC.Retrait(50);
+
             #endregion
 
             #region Création de la banque
+
             Title("Création de la banque");
-            Banque b = new Banque();
+            var b = new Banque();
             b.Nom = "Ma Banque";
 
             b.Ajouter(AC);
@@ -55,10 +60,11 @@ namespace GestionBanque05_Indexeurs
 
             b["001"].Depot(30);
             b["002"].Retrait(300);
+
             #endregion
         }
 
-        static void Title(string str)
+        private static void Title(string str)
         {
             Console.WriteLine();
             Console.WriteLine($"---- {str} ----");

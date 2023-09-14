@@ -1,33 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CSharpVSCodeExtensionDelegue
 {
     public delegate void ExtensionMain(string[] args);
 
-    class VisualStudioCode
+    internal class VisualStudioCode
     {
-        public List<VisualStudioCodeExtension> Extensions { get; set; }
-        public ExtensionMain ExecExtention = null;
+        public ExtensionMain ExecExtention;
 
         public VisualStudioCode(params VisualStudioCodeExtension[] extensions)
         {
             Extensions = new List<VisualStudioCodeExtension>();
 
-            foreach ( VisualStudioCodeExtension extension in extensions )
-            {
-                Extensions.Add(extension);
-            }
+            foreach (var extension in extensions) Extensions.Add(extension);
 
-            foreach ( VisualStudioCodeExtension extension in Extensions )
-            {
-                ExecExtention += extension.Main;
-            }
+            foreach (var extension in Extensions) ExecExtention += extension.Main;
         }
+
+        public List<VisualStudioCodeExtension> Extensions { get; set; }
 
         internal void Start()
         {
-            if ( ExecExtention != null ) ExecExtention(null);
+            if (ExecExtention != null) ExecExtention(null);
         }
     }
 }

@@ -5,24 +5,10 @@ namespace GestionBanque.Model
     // Surcharger l’opérateur « + » de la classe « Courant » afin qu’il retourne la somme, de type double, des soldes.
     // Cependant, les soldes négatifs ne doivent pas être pris en compte.
 
-    class Courant : Compte
+    internal class Courant : Compte
     {
         // Attributs        
         private double _LigneDeCredit;
-
-        // Propriétés
-        public double LigneDeCredit
-        {
-            get { return _LigneDeCredit; }
-            set
-            {
-                //if (value < 0) return; // À remplacer plus tard par une exception
-                if ( value < 0 )
-                    throw new InvalidOperationException("[Exception] La ligne de crédit doit être supérieure à 0.");
-
-                _LigneDeCredit = value;
-            }
-        }
 
         // Constructeurs
         public Courant(string numero, Personne titulaire) : base(numero, titulaire)
@@ -31,6 +17,20 @@ namespace GestionBanque.Model
 
         public Courant(string numero, Personne titulaire, double solde) : base(numero, titulaire, solde)
         {
+        }
+
+        // Propriétés
+        public double LigneDeCredit
+        {
+            get => _LigneDeCredit;
+            set
+            {
+                //if (value < 0) return; // À remplacer plus tard par une exception
+                if (value < 0)
+                    throw new InvalidOperationException("[Exception] La ligne de crédit doit être supérieure à 0.");
+
+                _LigneDeCredit = value;
+            }
         }
 
         // Méthodes

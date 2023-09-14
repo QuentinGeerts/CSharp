@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace _10_ClassesStatiques
+﻿namespace _10_ClassesStatiques
 {
-    class MaClasse /*: ClasseStatique*/
+    internal class MaClasse /*: ClasseStatique*/
     {
         public static string Y { get; set; }
         public int X { get; set; } // Propriété d'instance

@@ -2,16 +2,16 @@
 
 namespace _11_Interfaces
 {
-    class Bateau : IBateau
+    internal class Bateau : IBateau
     {
         public void Naviguer()
         {
-            Console.WriteLine($"La {this.GetType().Name} navigue");
+            Console.WriteLine($"La {GetType().Name} navigue");
         }
 
         public void Tourner()
         {
-            Console.WriteLine($"La {this.GetType().Name} tourne");
+            Console.WriteLine($"La {GetType().Name} tourne");
         }
     }
 }

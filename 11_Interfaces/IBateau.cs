@@ -1,6 +1,6 @@
 ﻿namespace _11_Interfaces
 {
-    interface IBateau : IVehicule
+    internal interface IBateau : IVehicule
     {
         void Naviguer();
     }

@@ -1,16 +1,16 @@
 ﻿namespace _07_Heritage
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Forme forme = new Forme();
+            var forme = new Forme();
             forme.Dessine();
 
-            Rectangle rectangle = new Rectangle();
+            var rectangle = new Rectangle();
             rectangle.Dessine();
 
-            Carre carre = new Carre();
+            var carre = new Carre();
             carre.Dessine();
         }
     }

@@ -1,24 +1,13 @@
 ﻿using System;
-
 using HeroesVSMonsters.Interfaces;
 
 namespace HeroesVSMonsters.Personnages
 {
-    class Hero : Personnage
+    internal class Hero : Personnage
     {
-        private int _Or, _Cuir;
+        public int Or { get; set; }
 
-        public int Or
-        {
-            get { return _Or; }
-            set { _Or = value; }
-        }
-
-        public int Cuir
-        {
-            get { return _Cuir; }
-            set { _Cuir = value; }
-        }
+        public int Cuir { get; set; }
 
         public void SeReposer()
         {
@@ -27,15 +16,16 @@ namespace HeroesVSMonsters.Personnages
 
         public void Depouiller(Monstre monstre)
         {
-            if ( monstre is IOr )
+            if (monstre is IOr)
             {
                 Console.WriteLine($"[Dépouille] {((IOr)monstre).Or} or(s)");
-                _Or += ( (IOr) monstre ).Or;
+                Or += ((IOr)monstre).Or;
             }
-            if ( monstre is ICuir )
+
+            if (monstre is ICuir)
             {
                 Console.WriteLine($"[Dépouille] {((ICuir)monstre).Cuir} cuir(s)");
-                _Cuir += ( (ICuir) monstre ).Cuir;
+                Cuir += ((ICuir)monstre).Cuir;
             }
         }
     }

@@ -2,7 +2,7 @@
 
 namespace _09_ClassesAbstraites
 {
-    class Femme : Personne
+    internal class Femme : Personne
     {
         public void Accoucher()
         {

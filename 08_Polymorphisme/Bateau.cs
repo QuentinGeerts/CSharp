@@ -2,7 +2,7 @@
 
 namespace _08_Polymorphisme
 {
-    class Bateau : Vehicule
+    internal class Bateau : Vehicule
     {
         public override void SeDeplacer()
         {

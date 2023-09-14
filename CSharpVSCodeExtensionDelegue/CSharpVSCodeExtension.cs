@@ -4,7 +4,7 @@ namespace CSharpVSCodeExtensionDelegue
 {
     internal class CSharpVSCodeExtension : VisualStudioCodeExtension
     {
-        public CSharpVSCodeExtension() 
+        public CSharpVSCodeExtension()
         {
             Name = "CSharp";
         }

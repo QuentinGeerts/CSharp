@@ -7,10 +7,11 @@ namespace _02_Encapsulation
     // dans la classe (par défaut) : private
     internal class Personne
     {
+        public DateTime dateNaiss;
+
         // Attributs
         public string nom;
         public string prenom;
-        public DateTime dateNaiss;
 
         // Opérations (méthodes)
         public void Marcher()

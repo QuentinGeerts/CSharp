@@ -1,6 +1,6 @@
 ﻿namespace _11_Interfaces
 {
-    interface IVoiture : IVehicule
+    internal interface IVoiture : IVehicule
     {
         void Rouler();
     }

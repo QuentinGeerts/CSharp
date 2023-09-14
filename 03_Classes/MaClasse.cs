@@ -2,9 +2,5 @@
 {
     internal class MaClasse
     {
-        public MaClasse()
-        {
-
-        }
     }
 }

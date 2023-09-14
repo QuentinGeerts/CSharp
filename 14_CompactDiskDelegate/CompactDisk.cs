@@ -1,6 +1,6 @@
 ﻿namespace _14_CompactDiskDelegate
 {
-    class CompactDisk
+    internal class CompactDisk
     {
         public int[] TimerTrack;
 

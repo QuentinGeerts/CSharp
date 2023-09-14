@@ -2,11 +2,10 @@
 
 namespace _12_ConstructeursDestructeurs
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
             //Personne personne = new Personne("Geerts", "Quentin", DateTime.Now, 180, 90);
             ////{
             ////    Nom = "Geerts"
@@ -25,10 +24,10 @@ namespace _12_ConstructeursDestructeurs
             //Eleve eleve = new Eleve() { Prenom = "Quentin" };
             //eleve.Nom = "Geerts";
 
-            Eleve eleve = new Eleve("L001", "Geerts", "Quentin", DateTime.Now, 180, 90);
+            var eleve = new Eleve("L001", "Geerts", "Quentin", DateTime.Now, 180, 90);
             Console.WriteLine(eleve);
 
-            Eleve eleve1 = new Eleve("L002", "Prevot", "Adrian");
+            var eleve1 = new Eleve("L002", "Prevot", "Adrian");
             Console.WriteLine(eleve1);
         }
     }

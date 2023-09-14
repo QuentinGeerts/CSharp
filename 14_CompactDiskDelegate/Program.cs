@@ -1,12 +1,12 @@
 ﻿namespace _14_CompactDiskDelegate
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            CompactDisk cd1 = new CompactDisk(0, 120, 340, 720, 980);
+            var cd1 = new CompactDisk(0, 120, 340, 720, 980);
 
-            CompactDiskPlayer player = new CompactDiskPlayer();
+            var player = new CompactDiskPlayer();
             player.CurrentDisk = cd1;
 
             player.AddTrack(player.SelectTrack(1));

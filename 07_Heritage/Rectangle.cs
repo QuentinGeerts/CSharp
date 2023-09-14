@@ -5,22 +5,11 @@ namespace _07_Heritage
     // Classe enfant, dérivée, sous classe
     // sealed = Empecher l'héritage à nouveau
     /*sealed*/
-    class Rectangle : Forme
+    internal class Rectangle : Forme
     {
-        private double _Largeur;
-        private double _Longueur;
+        public double Largeur { get; set; }
 
-        public double Largeur
-        {
-            get { return _Largeur; }
-            set { _Largeur = value; }
-        }
-
-        public double Longueur
-        {
-            get { return _Longueur; }
-            set { _Longueur = value; }
-        }
+        public double Longueur { get; set; }
 
         private int _X { get; set; }
 
@@ -30,6 +19,5 @@ namespace _07_Heritage
             base.Dessine();
             Console.WriteLine("qui est un rectangle");
         }
-
     }
 }

@@ -2,7 +2,7 @@
 
 namespace _07_Heritage
 {
-    class Carre : Rectangle
+    internal class Carre : Rectangle
     {
         // New = Dissimulation de la méthode Dessine
         public new void Dessine()

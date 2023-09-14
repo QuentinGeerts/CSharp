@@ -2,7 +2,7 @@
 
 namespace GestionBanque.Model
 {
-    class Personne
+    internal class Personne
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }

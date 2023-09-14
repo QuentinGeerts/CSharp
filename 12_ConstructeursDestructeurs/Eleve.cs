@@ -2,11 +2,8 @@
 
 namespace _12_ConstructeursDestructeurs
 {
-    class Eleve : Personne
+    internal class Eleve : Personne
     {
-        public string Matricule { get; set; }
-
-
         public Eleve()
         {
             Console.WriteLine("Eleve a été créé");
@@ -17,7 +14,8 @@ namespace _12_ConstructeursDestructeurs
             Matricule = matricule;
         }
 
-        public Eleve(string matricule, string nom, string prenom, DateTime dateNaiss, double taille, double poids) : base(nom, prenom, dateNaiss, taille, poids)
+        public Eleve(string matricule, string nom, string prenom, DateTime dateNaiss, double taille, double poids) :
+            base(nom, prenom, dateNaiss, taille, poids)
         {
             //Nom = nom;
             //Prenom = prenom;
@@ -26,6 +24,8 @@ namespace _12_ConstructeursDestructeurs
             //Poids = poids;
             Matricule = matricule;
         }
+
+        public string Matricule { get; set; }
 
         // Destructeur
         ~Eleve()

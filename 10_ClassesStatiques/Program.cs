@@ -2,15 +2,15 @@
 
 namespace _10_ClassesStatiques
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            MaClasse maClasse = new MaClasse();
+            var maClasse = new MaClasse();
             maClasse.X = 5;
             MaClasse.Y = "str";
 
-            MaClasse maClasse1 = new MaClasse();
+            var maClasse1 = new MaClasse();
             maClasse1.X = 8;
             //maClasse1.Y = "str";
             //maClasse1.Addition(5, 5);
@@ -27,7 +27,6 @@ namespace _10_ClassesStatiques
 
             // Math = Classe statique
             Console.WriteLine(Math.PI);
-
         }
     }
 }

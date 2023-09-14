@@ -7,35 +7,34 @@ namespace GestionBanque.Model
     // de surcharge de méthodes et d’encapsulation.
     // Attention le niveau d’accessibilité du mutateur de la propriété Solde doit rester « private ».
 
-    abstract class Compte : IBanker
+    internal abstract class Compte : IBanker
     {
-        private string _Numero;
-        private double _Solde;
-        private Personne _Titulaire;
-
         // Propriétés
-        public string Numero
-        {
-            get { return _Numero; }
-            set { _Numero = value; }
-        }
+        public string Numero { get; set; }
 
-        public double Solde
-        {
-            get { return _Solde; }
-            private set { _Solde = value; }
-        }
+        public double Solde { get; private set; }
 
-        public Personne Titulaire
-        {
-            get { return _Titulaire; }
-            set { _Titulaire = value; }
-        }
+        public Personne Titulaire { get; set; }
 
         // Méthodes
         public virtual void Retrait(double Montant)
         {
             Retrait(Montant, 0.0);
+        }
+
+        public void Depot(double Montant)
+        {
+            if (Montant <= 0) return; // À remplacer plus tard par une exception
+
+            Console.WriteLine($"[Dépot] : Compte n°{Numero} de {Montant}e");
+            Solde += Montant;
+        }
+
+        public void AppliquerInteret()
+        {
+            Console.WriteLine($"[AppliquerInteret] Compte n°{Numero} Solde AVANT : {Solde}e");
+            Solde += CalculInteret();
+            Console.WriteLine($"[AppliquerInteret] Compte n°{Numero} Solde APRES : {Solde}e");
         }
 
         public void Retrait(double Montant, double LigneDeCredit)
@@ -48,22 +47,7 @@ namespace GestionBanque.Model
             Solde -= Montant;
         }
 
-        public void Depot(double Montant)
-        {
-            if (Montant <= 0) return; // À remplacer plus tard par une exception
-
-            Console.WriteLine($"[Dépot] : Compte n°{Numero} de {Montant}e");
-            Solde += Montant;
-        }
-
         protected abstract double CalculInteret();
-
-        public void AppliquerInteret()
-        {
-            Console.WriteLine($"[AppliquerInteret] Compte n°{Numero} Solde AVANT : {Solde}e");
-            Solde += CalculInteret();
-            Console.WriteLine($"[AppliquerInteret] Compte n°{Numero} Solde APRES : {Solde}e");
-        }
 
         // Surcharge d'opérateurs
         public static double operator +(double Solde, Compte Compte)
