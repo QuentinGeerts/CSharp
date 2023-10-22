@@ -2,23 +2,23 @@
 
 namespace _08_Polymorphisme
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var vehicule = new Vehicule();
+            Vehicule vehicule = new Vehicule();
             vehicule.SeDeplacer();
             Console.WriteLine();
 
-            var voiture = new Voiture();
+            Voiture voiture = new Voiture();
             voiture.SeDeplacer();
             Console.WriteLine();
 
-            var voitureCourse = new VoitureCourse();
+            VoitureCourse voitureCourse = new VoitureCourse();
             voitureCourse.SeDeplacer();
             Console.WriteLine();
 
-            var bateau = new Bateau();
+            Bateau bateau = new Bateau();
             bateau.SeDeplacer();
             Console.WriteLine();
 
@@ -30,7 +30,7 @@ namespace _08_Polymorphisme
             v1.SeDeplacer();
             Console.WriteLine();
 
-            var voiture1 = (Voiture)v1; // Casting explicite
+            Voiture voiture1 = (Voiture)v1; // Casting explicite
             voiture1.SeDeplacer();
             Console.WriteLine();
 
@@ -39,7 +39,7 @@ namespace _08_Polymorphisme
             ((Bateau)v2).SeDeplacer();
             Console.WriteLine();
 
-            var bateau1 = (Bateau)v2; // Casting explicite
+            Bateau bateau1 = (Bateau)v2; // Casting explicite
             bateau1.SeDeplacer();
             Console.WriteLine();
         }

@@ -1,6 +1,6 @@
 ﻿namespace HeroesVSMonsters.Interfaces
 {
-    internal interface IOr
+    interface IOr
     {
         int Or { get; }
     }

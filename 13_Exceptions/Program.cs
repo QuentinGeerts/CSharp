@@ -2,11 +2,11 @@
 
 namespace _13_Exceptions
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var maClasse = new MaClasse();
+            MaClasse maClasse = new MaClasse();
             int[] ints = { 1, 2, 3, 4, 5, 6 };
 
             try
@@ -16,7 +16,7 @@ namespace _13_Exceptions
                 // gère l'exception
 
                 //Console.WriteLine(maClasse.Division(5, 0));
-                var index = 5;
+                int index = 5;
                 if (index < 0 || index > ints.Length - 1) throw new OutOfMyArrayException(index, ints);
                 Console.WriteLine(ints[index]);
             }

@@ -1,28 +1,26 @@
-﻿using System;
-using GestionBanque.Model;
+﻿using GestionBanque.Model;
+using System;
+using System.Collections.Generic;
 
 namespace GestionBanque13_Exceptions
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             Title("-- Gestion de banque - C# OO --");
 
             #region Création des personnes
-
             Title("Création des personnes");
 
-            var Adrian = new Personne("Prevot", "Adrian", DateTime.Now);
-            var Mathieu = new Personne("Meurée", "Mathieu", DateTime.Now);
-
+            Personne Adrian = new Personne("Prevot", "Adrian", DateTime.Now);
+            Personne Mathieu = new Personne("Meurée", "Mathieu", DateTime.Now);
             #endregion
 
             #region Création des comptes courants
-
             Title("Création des comptes courants");
 
-            var AC = new Courant("001", Adrian);
+            Courant AC = new Courant("001", Adrian);
             //AdrianCourant.Solde = 1500; // Ne fonctionne pas => private set
             try
             {
@@ -38,7 +36,7 @@ namespace GestionBanque13_Exceptions
             }
 
 
-            var AC2 = new Courant("003", Adrian)
+            Courant AC2 = new Courant("003", Adrian)
             {
                 LigneDeCredit = 50
             };
@@ -51,7 +49,7 @@ namespace GestionBanque13_Exceptions
                 Console.WriteLine(e.Message);
             }
 
-            var MC = new Courant("002", Mathieu);
+            Courant MC = new Courant("002", Mathieu);
             try
             {
                 MC.LigneDeCredit = 500;
@@ -63,14 +61,12 @@ namespace GestionBanque13_Exceptions
             {
                 Console.WriteLine(e.Message);
             }
-
             #endregion
 
             #region Création des comptes épargnes
-
             Title("Création des comptes épargnes");
 
-            var AE = new Epargne("004", Adrian);
+            Epargne AE = new Epargne("004", Adrian);
 
             try
             {
@@ -82,7 +78,7 @@ namespace GestionBanque13_Exceptions
                 Console.WriteLine(e.Message);
             }
 
-            var ME = new Epargne("005", Mathieu);
+            Epargne ME = new Epargne("005", Mathieu);
             try
             {
                 ME.Depot(2000);
@@ -92,14 +88,12 @@ namespace GestionBanque13_Exceptions
             {
                 Console.WriteLine(e.Message);
             }
-
             #endregion
 
             #region Création de la banque
-
             Title("Création de la banque");
 
-            var b = new Banque();
+            Banque b = new Banque();
             b.Nom = "Ma Banque";
 
             b.Ajouter(AC);
@@ -117,32 +111,26 @@ namespace GestionBanque13_Exceptions
             {
                 Console.WriteLine(e.Message);
             }
-
             #endregion
 
             #region Calcul des avoirs
-
             Title("Calcul des avoirs");
 
             Console.WriteLine("Adrian : " + b.AvoirDesComptes(Adrian));
             Console.WriteLine("Mathieu : " + b.AvoirDesComptes(Mathieu));
-
             #endregion
 
             #region Appliquer les intérêts
-
             Title("Appliquer les intérêts");
 
-            foreach (var compte in b.Comptes)
+            foreach (KeyValuePair<string, Compte> compte in b.Comptes)
             {
                 compte.Value.AppliquerInteret();
                 Console.WriteLine();
             }
-
             #endregion
 
             #region Utilisation des Interfaces IBanker et ICustomer
-
             Title("Utilisation des Interfaces IBanker et ICustomer");
 
             IBanker banker = b["001"];
@@ -170,11 +158,10 @@ namespace GestionBanque13_Exceptions
             {
                 Console.WriteLine(e.Message);
             }
-
             #endregion
         }
 
-        private static void Title(string str)
+        static void Title(string str)
         {
             Console.WriteLine();
             Console.WriteLine($"---- {str} ----");

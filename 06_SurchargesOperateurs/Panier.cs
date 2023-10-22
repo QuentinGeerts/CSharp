@@ -2,19 +2,24 @@
 
 namespace _06_SurchargesOperateurs
 {
-    internal class Panier
+    class Panier
     {
-        public List<Fruit> Fruits { get; } = new();
+        private List<Fruit> _Fruits = new List<Fruit>();
+
+        public List<Fruit> Fruits { get { return _Fruits; } }
 
         public void AddFruit(Fruit fruit)
         {
-            Fruits.Add(fruit);
+            _Fruits.Add(fruit);
         }
 
         public static double GetWeight(Panier p)
         {
             double Poids = 0;
-            foreach (var fruit in p.Fruits) Poids += fruit.Poids;
+            foreach (Fruit fruit in p.Fruits)
+            {
+                Poids += fruit.Poids;
+            }
 
             return Poids;
         }
@@ -22,11 +27,17 @@ namespace _06_SurchargesOperateurs
         // Surcharge d'opérateur +
         public static Panier operator +(Panier p1, Panier p2)
         {
-            var panier = new Panier();
+            Panier panier = new Panier();
 
-            foreach (var fruit in p1.Fruits) panier.AddFruit(fruit);
+            foreach (Fruit fruit in p1.Fruits)
+            {
+                panier.AddFruit(fruit);
+            }
 
-            foreach (var fruit in p2.Fruits) panier.AddFruit(fruit);
+            foreach (Fruit fruit in p2.Fruits)
+            {
+                panier.AddFruit(fruit);
+            }
 
             return panier;
         }

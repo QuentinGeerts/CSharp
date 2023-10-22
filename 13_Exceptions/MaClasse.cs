@@ -2,7 +2,7 @@
 
 namespace _13_Exceptions
 {
-    internal class MaClasse
+    class MaClasse
     {
         public double Division(int n1, int n2)
         {
