@@ -2,46 +2,77 @@
 
 namespace _13_Exceptions
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            MaClasse maClasse = new MaClasse();
-            int[] ints = { 1, 2, 3, 4, 5, 6 };
+            // Les exceptions sont utilisées pour gérer les erreurs qui se produisent pendant l'exécution d'un programme.
+            // Elles sont des objets qui héritent de la classe "System.Exception".
 
+            /*
+                Utilisation de try, catch, finally
+                try :
+                    Ce bloc est utilisé pour envelopper le code qui peut potentiellement générer une exception.
+                catch :
+                    Ce bloc est utilisé pour capturer et gérer l'exception.
+                finally :
+                    Ce bloc est exécuté après les blocs try et catch, qu'une exception soit survenue ou non.
+                    Il est souvent utilisé pour nettoyer les ressources.
+            */
+
+            // Vous pouvez avoir plusieurs blocs catch pour gérer différents types d'exceptions.
             try
             {
-                // On essaie de réaliser les instructions dans le Try
-                // Si une exception est déclenchée, le bloc catch qui attrape l'exception
-                // gère l'exception
-
-                //Console.WriteLine(maClasse.Division(5, 0));
-                int index = 5;
-                if (index < 0 || index > ints.Length - 1) throw new OutOfMyArrayException(index, ints);
-                Console.WriteLine(ints[index]);
+                // Code susceptible de générer une exception
+                // int x = int.Parse("ceci n'est pas un nombre"); // Format incorrect
+                // int x = int.Parse(null); // Argument null
+                var x = int.Parse((long.MaxValue / 2).ToString()); // Dépassement
             }
-            catch (DivideByZeroException e)
+            catch (ArgumentNullException ex)
             {
-                Console.WriteLine(e.Message);
+                // Gestion d'une exception spécifique
+                // Dans le cas où l'argument est null
+                Console.WriteLine("Argument null : " + ex.Message);
             }
-            catch (OutOfMyArrayException e)
+            catch (FormatException ex)
             {
-                Console.WriteLine(e.Message);
+                // Gestion d'une exception spécifique
+                // Ne respecte pas le format autorisé
+                Console.WriteLine("Format incorrect : " + ex.Message);
             }
-            catch (IndexOutOfRangeException e)
+            catch (OverflowException ex)
             {
-                Console.WriteLine("En dehors de la portée du tableau.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Une exception");
+                // Gestion d'une exception spécifique
+                // Dépasse les valeurs autorisées
+                Console.WriteLine("Dépassement : " + ex.Message);
             }
             finally
             {
-                Console.WriteLine("Fin du try");
+                // Nettoyage, exécuté qu'il y ait une exception ou non
+                Console.WriteLine("Bloc finally exécuté.");
             }
 
-            Console.WriteLine("Fin du programme");
+            // Le mot-clé throw est utilisé pour lever une exception.
+
+            try
+            {
+                throw new InvalidOperationException("Une erreur s'est produite.");
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine("Erreur : " + ex.Message);
+            }
+
+            // Vous pouvez créer vos propres types d'exceptions en héritant de la classe Exception.
+
+            try
+            {
+                throw new MyException("Ceci est mon exception personnalisée.");
+            }
+            catch (MyException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
