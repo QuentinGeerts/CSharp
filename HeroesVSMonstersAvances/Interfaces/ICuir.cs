@@ -1,6 +1,6 @@
 ﻿namespace HeroesVSMonsters.Interfaces
 {
-    internal interface ICuir
+    interface ICuir
     {
         int Cuir { get; }
     }

@@ -5,7 +5,8 @@
     // de surcharge de méthodes et d’encapsulation.
     // Attention le niveau d’accessibilité du mutateur de la propriété Solde doit rester « private ».
 
-    internal class Compte
+    class Compte
     {
+
     }
 }

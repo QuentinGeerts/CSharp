@@ -2,18 +2,39 @@
 
 namespace GestionBanque.Model
 {
-    internal class Epargne
+
+    class Epargne
     {
         // Attributs
+        private string _Numero;
+        private double _Solde;
+        private DateTime _DateDernierRetrait;
+        private Personne _Titulaire;
 
         // Propriétés
-        public string Numero { get; set; }
+        public string Numero
+        {
+            get { return _Numero; }
+            set { _Numero = value; }
+        }
 
-        public double Solde { get; private set; }
+        public double Solde
+        {
+            get { return _Solde; }
+            private set { _Solde = value; }
+        }
 
-        public DateTime DateDernierRetrait { get; private set; }
+        public DateTime DateDernierRetrait
+        {
+            get { return _DateDernierRetrait; }
+            private set { _DateDernierRetrait = value; }
+        }
 
-        public Personne Titulaire { get; set; }
+        public Personne Titulaire
+        {
+            get { return _Titulaire; }
+            set { _Titulaire = value; }
+        }
 
         // Méthodes
         public void Retrait(double Montant)

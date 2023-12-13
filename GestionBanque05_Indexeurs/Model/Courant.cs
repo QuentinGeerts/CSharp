@@ -2,20 +2,30 @@
 
 namespace GestionBanque.Model
 {
-    internal class Courant
+    class Courant
     {
-        private double _LigneDeCredit;
-
         // Attributs
+        private string _Numero;
+        private double _Solde;
+        private double _LigneDeCredit;
+        private Personne _Titulaire;
 
         // Propriétés
-        public string Numero { get; set; }
+        public string Numero
+        {
+            get { return _Numero; }
+            set { _Numero = value; }
+        }
 
-        public double Solde { get; private set; }
+        public double Solde
+        {
+            get { return _Solde; }
+            private set { _Solde = value; }
+        }
 
         public double LigneDeCredit
         {
-            get => _LigneDeCredit;
+            get { return _LigneDeCredit; }
             set
             {
                 if (value < 0) return; // À remplacer plus tard par une exception
@@ -24,7 +34,11 @@ namespace GestionBanque.Model
             }
         }
 
-        public Personne Titulaire { get; set; }
+        public Personne Titulaire
+        {
+            get { return _Titulaire; }
+            set { _Titulaire = value; }
+        }
 
         // Méthodes
         public void Retrait(double Montant)

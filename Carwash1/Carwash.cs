@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Carwash1
+﻿namespace Carwash1
 {
     internal class Carwash
     {
-        private readonly CarwashDelegate cd;
+        CarwashDelegate cd = null;
 
         public Carwash()
         {
@@ -16,28 +14,25 @@ namespace Carwash1
 
         private void Preparer(Voiture v)
         {
-            Console.WriteLine($"Je prépare la voiture : {v.Plaque}");
+            System.Console.WriteLine($"Je prépare la voiture : {v.Plaque}");
         }
-
         private void Laver(Voiture v)
         {
-            Console.WriteLine($"Je lave la voiture : {v.Plaque}");
+            System.Console.WriteLine($"Je lave la voiture : {v.Plaque}");
         }
-
         private void Secher(Voiture v)
         {
-            Console.WriteLine($"Je sèche la voiture : {v.Plaque}");
+            System.Console.WriteLine($"Je sèche la voiture : {v.Plaque}");
         }
-
         private void Finaliser(Voiture v)
         {
-            Console.WriteLine($"Je finalise la voiture : {v.Plaque}");
+            System.Console.WriteLine($"Je finalise la voiture : {v.Plaque}");
         }
-
         public void Traiter(Voiture v)
         {
             if (cd != null) cd(v);
-            Console.WriteLine();
+            System.Console.WriteLine();
         }
+
     }
 }

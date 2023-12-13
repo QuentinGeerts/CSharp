@@ -1,11 +1,11 @@
-﻿using System;
-using HeroesVSMonsters.Personnages;
+﻿using HeroesVSMonsters.Personnages;
+using System;
 
 namespace HeroesVSMonsters
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("~~ Création du Hero ~~");
 
@@ -13,17 +13,20 @@ namespace HeroesVSMonsters
             int choix;
 
             while (!int.TryParse(Console.ReadLine(), out choix) || !(choix == 1 || choix == 2))
+            {
                 Console.WriteLine("Mauvais choix.\n1 = Humain\n2 = Nain\n\nChoix :");
+            }
 
-            Hero hero = choix == 1 ? new Humain() : new Nain();
+            Hero hero = (choix == 1) ? new Humain() : new Nain();
 
             hero.Information();
 
             Console.WriteLine("~~ Création de la foret ~~");
-            var shorewood = new Foret("Shorewood", hero);
+            Foret shorewood = new Foret("Shorewood", hero);
 
             Console.WriteLine("~~ Début de la partie ~~");
             shorewood.Lance();
+
         }
     }
 }

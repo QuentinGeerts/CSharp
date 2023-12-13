@@ -6,12 +6,12 @@ namespace _14_CompactDiskDelegate
 
     internal class CompactDiskPlayer
     {
-        public CDPlayerProgram Program;
         public CompactDisk CurrentDisk { get; set; }
+        public CDPlayerProgram Program = null;
 
         public CDPlayerProgram SelectTrack(int number)
         {
-            return delegate
+            return delegate ()
             {
                 Console.WriteLine($"Nous lisons la piste {number} au temps {CurrentDisk.TimerTrack[number - 1]}");
             };

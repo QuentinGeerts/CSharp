@@ -1,6 +1,10 @@
 ﻿namespace HeroesVSMonsters.Personnages
 {
-    internal class Monstre : Personnage
+    class Monstre : Personnage
     {
+        public Monstre()
+        {
+
+        }
     }
 }

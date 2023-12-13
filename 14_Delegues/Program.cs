@@ -2,11 +2,11 @@
 
 namespace _14_Delegues
 {
-    internal delegate void DireBonjour(string s);
 
-    internal class Program
+    delegate void DireBonjour(string s);
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             DireBonjour direBonjour = null;
 
@@ -15,7 +15,10 @@ namespace _14_Delegues
             direBonjour += EnNeerlandais;
 
             // Methode anonyme
-            direBonjour += delegate(string prenom) { Console.WriteLine("Ohayo " + prenom); };
+            direBonjour += delegate (string prenom)
+            {
+                Console.WriteLine("Ohayo " + prenom);
+            };
 
             // Plante si vous avez votre Delegate à null
             //direBonjour("Quentin");
@@ -28,24 +31,24 @@ namespace _14_Delegues
             RaiseDireBonjour("Quentin", direBonjour);
         }
 
-        private static void RaiseDireBonjour(string prenom, DireBonjour d)
+        static void RaiseDireBonjour(string prenom, DireBonjour d)
         {
             Console.WriteLine("Callback");
             if (d != null)
                 d(prenom);
         }
 
-        private static void EnFrancais(string prenom)
+        static void EnFrancais(string prenom)
         {
             Console.WriteLine("Bonjour " + prenom);
         }
 
-        private static void EnAnglais(string prenom)
+        static void EnAnglais(string prenom)
         {
             Console.WriteLine("Hi " + prenom);
         }
 
-        private static void EnNeerlandais(string prenom)
+        static void EnNeerlandais(string prenom)
         {
             Console.WriteLine("Goeidag " + prenom);
         }

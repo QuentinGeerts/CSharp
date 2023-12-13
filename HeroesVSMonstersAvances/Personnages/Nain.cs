@@ -1,7 +1,7 @@
 ﻿namespace HeroesVSMonsters.Personnages
 {
-    internal class Nain : Hero
+    class Nain : Hero
     {
-        public override int Endurance => base.Endurance + 2;
+        public override int Endurance { get => base.Endurance + 2; }
     }
 }

@@ -2,12 +2,24 @@
 
 namespace HeroesVSMonsters.Tools
 {
-    internal class De
+    class De
     {
-        private readonly Random _Random;
-
         // Attributes
         private int _Minimum;
+        private int _Maximum;
+        private Random _Random;
+
+        // Properties
+        public int Minimum
+        {
+            get { return 1; }
+        }
+
+        public int Maximum
+        {
+            get { return _Maximum; }
+            private set { _Maximum = value; }
+        }
 
         // Constructor
         public De(int Maximum)
@@ -16,18 +28,16 @@ namespace HeroesVSMonsters.Tools
             _Random = new Random(GetSeed());
         }
 
-        // Properties
-        public int Minimum => 1;
-
-        public int Maximum { get; }
-
         // Methods
         private int GetSeed()
         {
-            var id = Guid.NewGuid();
-            var Seed = 0;
+            Guid id = Guid.NewGuid();
+            int Seed = 0;
 
-            foreach (var b in id.ToByteArray()) Seed += b;
+            foreach (byte b in id.ToByteArray())
+            {
+                Seed += b;
+            }
 
             return Seed;
         }
@@ -40,19 +50,26 @@ namespace HeroesVSMonsters.Tools
         public static int GetNouvelleCaracteristique()
         {
             const int nbDes = 4;
-            var Des = new int[nbDes];
-            var d = new De(6);
+            int[] Des = new int[nbDes];
+            De d = new De(6);
 
-            for (var i = 0; i < nbDes; i++) Des[i] = d.Lance();
+            for (int i = 0; i < nbDes; i++)
+            {
+                Des[i] = d.Lance();
+            }
 
-            for (var i = 0; i < nbDes - 1; i++)
-            for (var j = i + 1; j < nbDes; j++)
-                if (Des[i] < Des[j])
+            for (int i = 0; i < nbDes - 1; i++)
+            {
+                for (int j = i + 1; j < nbDes; j++)
                 {
-                    var temp = Des[i];
-                    Des[i] = Des[j];
-                    Des[j] = temp;
+                    if (Des[i] < Des[j])
+                    {
+                        int temp = Des[i];
+                        Des[i] = Des[j];
+                        Des[j] = temp;
+                    }
                 }
+            }
 
             return Des[0] + Des[1] + Des[2];
         }

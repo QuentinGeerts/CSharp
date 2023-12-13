@@ -4,20 +4,25 @@ namespace CSharpVSCodeExtensionDelegue
 {
     public delegate void ExtensionMain(string[] args);
 
-    internal class VisualStudioCode
+    class VisualStudioCode
     {
-        public ExtensionMain ExecExtention;
+        public List<VisualStudioCodeExtension> Extensions { get; set; }
+        public ExtensionMain ExecExtention = null;
 
         public VisualStudioCode(params VisualStudioCodeExtension[] extensions)
         {
             Extensions = new List<VisualStudioCodeExtension>();
 
-            foreach (var extension in extensions) Extensions.Add(extension);
+            foreach (VisualStudioCodeExtension extension in extensions)
+            {
+                Extensions.Add(extension);
+            }
 
-            foreach (var extension in Extensions) ExecExtention += extension.Main;
+            foreach (VisualStudioCodeExtension extension in Extensions)
+            {
+                ExecExtention += extension.Main;
+            }
         }
-
-        public List<VisualStudioCodeExtension> Extensions { get; set; }
 
         internal void Start()
         {

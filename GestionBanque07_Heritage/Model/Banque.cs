@@ -4,22 +4,28 @@ using System.Linq;
 
 namespace GestionBanque.Model
 {
-    internal class Banque
+    class Banque
     {
         // Attributs
-        private readonly Dictionary<string, Courant> _Comptes = new();
+        Dictionary<string, Courant> _Comptes = new Dictionary<string, Courant>();
 
         // Propriétés
         public string Nom { get; set; }
 
-        public KeyValuePair<string, Courant>[] Comptes => _Comptes.ToArray();
+        public KeyValuePair<string, Courant>[] Comptes
+        {
+            get
+            {
+                return _Comptes.ToArray();
+            }
+        }
 
         // Indexeurs
         public Courant this[string Numero]
         {
             get
             {
-                _Comptes.TryGetValue(Numero, out var courant);
+                _Comptes.TryGetValue(Numero, out Courant courant);
                 return courant;
             }
         }
@@ -28,9 +34,13 @@ namespace GestionBanque.Model
         public void Ajouter(Courant Compte)
         {
             if (_Comptes.TryAdd(Compte.Numero, Compte))
+            {
                 Console.WriteLine($"Le compte n°{Compte.Numero} a été ajouté.");
+            }
             else
+            {
                 Console.WriteLine("Le compte existe déjà.");
+            }
         }
 
         public void Supprimer(string Numero)
@@ -40,17 +50,19 @@ namespace GestionBanque.Model
 
         public double AvoirDesComptes(Personne p)
         {
-            var TotalDesAvoirs = 0.0;
+            double TotalDesAvoirs = 0.0;
 
-            foreach (var c in _Comptes.Values)
+            foreach (Courant c in _Comptes.Values)
+            {
                 if (c.Titulaire == p)
                 {
-                    Console.WriteLine(
-                        $"[AvoirDesComptes] {c.Titulaire.Nom} {c.Titulaire.Prenom} n°{c.Numero} : {c.Solde}e");
+                    Console.WriteLine($"[AvoirDesComptes] {c.Titulaire.Nom} {c.Titulaire.Prenom} n°{c.Numero} : {c.Solde}e");
                     TotalDesAvoirs += c; // TotalDesAvoirs = TotalDesAvoirs + c // double + Courant
                 }
+            }
 
             return TotalDesAvoirs;
         }
+
     }
 }
