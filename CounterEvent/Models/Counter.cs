@@ -18,5 +18,7 @@ public class Counter
         if (ChangedValue != null)
             // Déclenche l'événement en passant la nouvelle valeur
             ChangedValue(_value);
+        // ou
+        // ChangedValue?.Invoke(_value);
     }
 }
