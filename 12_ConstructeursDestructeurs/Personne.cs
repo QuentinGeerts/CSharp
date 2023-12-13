@@ -12,7 +12,8 @@ namespace _12_ConstructeursDestructeurs
 
         // Surcharge de constructeur
         // : this() => fait appel au constructeur vide repris en première position
-        public Personne(string nom, string prenom) : this()
+        public Personne(string nom, string prenom) 
+            : this()
         {
             Nom = nom;
             Prenom = prenom;
@@ -20,7 +21,8 @@ namespace _12_ConstructeursDestructeurs
 
         // Surcharge de constructeur
         // : this(nom, prenom) => fait appel au constructeur avec deux paramètres repris en deuxième position
-        public Personne(string nom, string prenom, DateTime dateNaiss, double taille, double poids) : this(nom, prenom)
+        public Personne(string nom, string prenom, DateTime dateNaiss, double taille, double poids) 
+            : this(nom, prenom)
         {
             //Nom = nom;
             //Prenom = prenom;

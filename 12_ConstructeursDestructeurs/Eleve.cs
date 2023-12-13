@@ -9,13 +9,14 @@ namespace _12_ConstructeursDestructeurs
             Console.WriteLine("Eleve a été créé");
         }
 
-        public Eleve(string matricule, string nom, string prenom) : base(nom, prenom)
+        public Eleve(string matricule, string nom, string prenom) 
+            : base(nom, prenom)
         {
             Matricule = matricule;
         }
 
-        public Eleve(string matricule, string nom, string prenom, DateTime dateNaiss, double taille, double poids) :
-            base(nom, prenom, dateNaiss, taille, poids)
+        public Eleve(string matricule, string nom, string prenom, DateTime dateNaiss, double taille, double poids) 
+            : base(nom, prenom, dateNaiss, taille, poids)
         {
             //Nom = nom;
             //Prenom = prenom;
