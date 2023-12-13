@@ -33,5 +33,10 @@ namespace _12_ConstructeursDestructeurs
         {
             Console.WriteLine("Objet élève détruit");
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + $" {Matricule}";
+        }
     }
 }
