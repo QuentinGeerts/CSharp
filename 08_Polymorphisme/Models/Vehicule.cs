@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _08_Polymorphisme
+namespace _08_Polymorphisme.Models
 {
     internal class Vehicule
     {

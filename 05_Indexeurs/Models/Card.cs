@@ -1,4 +1,4 @@
-﻿namespace _05_Indexeurs
+﻿namespace _05_Indexeurs.Models
 {
     public enum Couleurs
     {
