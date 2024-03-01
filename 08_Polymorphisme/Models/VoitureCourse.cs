@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace _08_Polymorphisme
+namespace _08_Polymorphisme.Models
 {
-    internal class Bateau : Vehicule
+    internal class VoitureCourse : Voiture
     {
         public override void SeDeplacer()
         {
             base.SeDeplacer();
-            Console.Write(" en bateau");
+            Console.Write(" de course");
         }
     }
 }

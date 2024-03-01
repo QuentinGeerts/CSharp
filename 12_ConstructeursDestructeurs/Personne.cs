@@ -10,9 +10,11 @@ public class Personne
         Console.WriteLine("Personne a été créée");
     }
 
+
     // Surcharge de constructeur
     // : this() => fait appel au constructeur vide repris en première position
-    public Personne(string nom, string prenom) : this()
+    public Personne(string nom, string prenom) 
+        : this()
     {
         Nom = nom;
         Prenom = prenom;
@@ -20,7 +22,8 @@ public class Personne
 
     // Surcharge de constructeur
     // : this(nom, prenom) => fait appel au constructeur avec deux paramètres repris en deuxième position
-    public Personne(string nom, string prenom, DateTime dateNaiss, double taille, double poids) : this(nom, prenom)
+    public Personne(string nom, string prenom, DateTime dateNaiss, double taille, double poids) 
+        : this(nom, prenom)
     {
         //Nom = nom;
         //Prenom = prenom;
@@ -30,6 +33,7 @@ public class Personne
     }
     // Pour créer un objet, on a besoin d'un constructeur
     // Constructeur = nomdelaclasse() {}
+
 
     public string Nom { get; set; }
     public string Prenom { get; set; }

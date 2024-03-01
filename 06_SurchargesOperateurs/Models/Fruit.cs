@@ -1,4 +1,4 @@
-﻿namespace _06_SurchargesOperateurs
+﻿namespace _06_SurchargesOperateurs.Models
 {
     internal class Fruit
     {

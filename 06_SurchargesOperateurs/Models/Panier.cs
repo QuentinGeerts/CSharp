@@ -1,39 +1,45 @@
 ﻿using System.Collections.Generic;
 
-namespace _06_SurchargesOperateurs
+namespace _06_SurchargesOperateurs.Models
 {
     class Panier
     {
-        private List<Fruit> _Fruits = new List<Fruit>();
+        private readonly List<Fruit> _fruits = new List<Fruit>();
 
-        public List<Fruit> Fruits { get { return _Fruits; } }
+        public List<Fruit> Fruits => _fruits;
 
         public void AddFruit(Fruit fruit)
         {
-            _Fruits.Add(fruit);
+            if (fruit is null) return;
+            _fruits.Add(fruit);
         }
 
         public static double GetWeight(Panier p)
         {
-            double Poids = 0;
+            double poids = 0;
+
             foreach (Fruit fruit in p.Fruits)
             {
-                Poids += fruit.Poids;
+                poids += fruit.Poids;
             }
 
-            return Poids;
+            return poids;
         }
 
         // Surcharge d'opérateur +
+        // Permet de retourner un nouveau panier contenant les fruits 
+        // des deux paniers additionnés
         public static Panier operator +(Panier p1, Panier p2)
         {
             Panier panier = new Panier();
 
+            // Ajouter le premier panier dans le grand
             foreach (Fruit fruit in p1.Fruits)
             {
                 panier.AddFruit(fruit);
             }
 
+            // Ajouter le deuxième panier dans le grand
             foreach (Fruit fruit in p2.Fruits)
             {
                 panier.AddFruit(fruit);

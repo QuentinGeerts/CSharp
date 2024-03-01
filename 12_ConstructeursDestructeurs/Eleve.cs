@@ -9,13 +9,15 @@ public class Eleve : Personne
         Console.WriteLine("Eleve a été créé");
     }
 
-    public Eleve(string matricule, string nom, string prenom) : base(nom, prenom)
+
+    public Eleve(string matricule, string nom, string prenom) 
+        : base(nom, prenom)
     {
         Matricule = matricule;
     }
 
-    public Eleve(string matricule, string nom, string prenom, DateTime dateNaiss, double taille, double poids) :
-        base(nom, prenom, dateNaiss, taille, poids)
+    public Eleve(string matricule, string nom, string prenom, DateTime dateNaiss, double taille, double poids) 
+        : base(nom, prenom, dateNaiss, taille, poids)
     {
         //Nom = nom;
         //Prenom = prenom;
@@ -25,11 +27,19 @@ public class Eleve : Personne
         Matricule = matricule;
     }
 
+
     public string Matricule { get; set; }
 
     // Destructeur
     ~Eleve()
     {
         Console.WriteLine("Objet élève détruit");
+    }
+
+    public override string ToString()
+    {
+        return base.ToString() + $" {Matricule}";
+    }
+
     }
 }
